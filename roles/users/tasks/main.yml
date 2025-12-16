@@ -1,0 +1,16 @@
+# Documentation: /docs/roles/users.md
+
+
+- name: Create admin user
+  user:
+    name: "{{ admin_user.name }}"
+    groups: "{{ admin_user.groups }}"
+    shell: /bin/bash
+    state: present
+
+- name: Create developer users
+  user:
+    name: "{{ item.name }}"
+    shell: /bin/bash
+    state: present
+  loop: "{{ developers }}"

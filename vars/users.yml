@@ -1,0 +1,9 @@
+# Documentation: /docs/vars/users.md
+
+admin_user:
+  name: admin
+  groups: sudo
+
+developers:
+  - name: dev1
+  - name: dev2

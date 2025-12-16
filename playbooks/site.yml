@@ -1,0 +1,13 @@
+# Documentation: /docs/playbook/site.md
+
+- hosts: craftroast
+  become: true
+  vars_files:
+    - ../vars/users.yml
+  
+  roles:
+    - commmon
+    - users
+    - docker
+    - bagisto
+    - grafana
